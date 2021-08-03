@@ -9,3 +9,51 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r}
+fx <- expression(x^2)
+
+df_dx <- D(expr = fx, name = 'x')
+
+df_dx
+
+# Evaluate the slope of f(x) at x = 831
+
+x <- 831
+eval(expr = df_dx)
+```
+```{r}
+gt <- expression(3 * t ^ 2 -4 * cos(t))
+
+dg_dt <- D(expr = gt, name = 't')
+
+dg_dt
+
+```
+
+```{r}
+fx <- expression(x^3)
+
+df_dx <- D(expr = fx, name = 'x')
+
+df_dx
+
+# Evaluate the slope of f(x) at x = 2 
+
+x <- 2
+eval(expr = df_dx)
+
+```
+
+```{r}
+fx <- expression(x^3)
+
+df_dx <- D(expr = fx, name = 'x')
+
+df_dx
+
+# Evaluate the slope of in a sequence 
+
+x <- seq(from = -10, to = 10, by = 0.5)
+eval(expr = df_dx)
+```
+

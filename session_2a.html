@@ -171,7 +171,49 @@ pre code {
 </div>
 
 
+<pre class="r"><code>fx &lt;- expression(x^2)
 
+df_dx &lt;- D(expr = fx, name = &#39;x&#39;)
+
+df_dx</code></pre>
+<pre><code>## 2 * x</code></pre>
+<pre class="r"><code># Evaluate the slope of f(x) at x = 831
+
+x &lt;- 831
+eval(expr = df_dx)</code></pre>
+<pre><code>## [1] 1662</code></pre>
+<pre class="r"><code>gt &lt;- expression(3 * t ^ 2 -4 * cos(t))
+
+dg_dt &lt;- D(expr = gt, name = &#39;t&#39;)
+
+dg_dt</code></pre>
+<pre><code>## 3 * (2 * t) + 4 * sin(t)</code></pre>
+<pre class="r"><code>fx &lt;- expression(x^3)
+
+df_dx &lt;- D(expr = fx, name = &#39;x&#39;)
+
+df_dx</code></pre>
+<pre><code>## 3 * x^2</code></pre>
+<pre class="r"><code># Evaluate the slope of f(x) at x = 2 
+
+x &lt;- 2
+eval(expr = df_dx)</code></pre>
+<pre><code>## [1] 12</code></pre>
+<pre class="r"><code>fx &lt;- expression(x^3)
+
+df_dx &lt;- D(expr = fx, name = &#39;x&#39;)
+
+df_dx</code></pre>
+<pre><code>## 3 * x^2</code></pre>
+<pre class="r"><code># Evaluate the slope of in a sequence 
+
+x &lt;- seq(from = -10, to = 10, by = 0.5)
+eval(expr = df_dx)</code></pre>
+<pre><code>##  [1] 300.00 270.75 243.00 216.75 192.00 168.75 147.00 126.75 108.00  90.75
+## [11]  75.00  60.75  48.00  36.75  27.00  18.75  12.00   6.75   3.00   0.75
+## [21]   0.00   0.75   3.00   6.75  12.00  18.75  27.00  36.75  48.00  60.75
+## [31]  75.00  90.75 108.00 126.75 147.00 168.75 192.00 216.75 243.00 270.75
+## [41] 300.00</code></pre>
 
 
 
