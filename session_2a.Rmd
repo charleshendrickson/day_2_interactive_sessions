@@ -51,7 +51,7 @@ df_dx <- D(expr = fx, name = 'x')
 
 df_dx
 
-# Evaluate the slope of in a sequence 
+# Evaluate the slope of in a sequence !
 
 x <- seq(from = -10, to = 10, by = 0.5)
 eval(expr = df_dx)
